@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 551cd43993ec09d46a2e798f8504f7a6
+guid: 56454ad6e565abe42ac3481b79f01769
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638432365687976265
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Chef_Frame_0
+  - name: Janitor_Frame_0
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 23
-    spriteID: 0d53d7846ac89f7469b2c743797d9193
+    spriteID: 7a8170272603e1848952ebc9ed832345
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Chef_Frame_1
+  - name: Janitor_Frame_1
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 35
       width: 20
       height: 23
-    spriteID: c7bab2e47f8be7843aae827ded04297b
+    spriteID: a7da2570e7c8d1946983488fb6211811
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 35}
-  - name: Chef_Frame_2
+  - name: Janitor_Frame_2
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 66
       width: 20
       height: 23
-    spriteID: cd372f96aec98564ea70342e88128088
+    spriteID: 67f32cd3d879b324187b73968cac260e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 66}
-  - name: Chef_Frame_3
+  - name: Janitor_Frame_3
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 97
       width: 20
       height: 23
-    spriteID: 578f9a533b872ba40b5be7bff7181a43
+    spriteID: 81d32c417729711419c8c36389a1691e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 97}
-  - name: Chef_Frame_4
+  - name: Janitor_Frame_4
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 23
-    spriteID: 35040973c5822e840be80f93ee3c719b
+    spriteID: e018c3301e281dd4197fe32c3c38eaad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,7 +221,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 32, y: 4}
-  - name: Chef_Frame_5
+  - name: Janitor_Frame_5
     originalName: 
     pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 35
       width: 20
       height: 23
-    spriteID: 68e2152a3b1b430488646c48909093ce
+    spriteID: 62dc579f02c1e1740aa0dedc4051ea78
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -244,63 +244,111 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -770922670
-    name: Chef
+    guid: -161468067
+    name: Janitor
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Chef_Frame_0
+    - name: Janitor_Frame_0
       frameIndex: 0
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: 0d53d7846ac89f7469b2c743797d9193
-    - name: Chef_Frame_1
+      spriteId: 7a8170272603e1848952ebc9ed832345
+    - name: Janitor_Frame_1
       frameIndex: 1
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: c7bab2e47f8be7843aae827ded04297b
-    - name: Chef_Frame_2
+      spriteId: a7da2570e7c8d1946983488fb6211811
+    - name: Janitor_Frame_2
       frameIndex: 2
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: cd372f96aec98564ea70342e88128088
-    - name: Chef_Frame_3
+      spriteId: 67f32cd3d879b324187b73968cac260e
+    - name: Janitor_Frame_3
       frameIndex: 3
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: 578f9a533b872ba40b5be7bff7181a43
-    - name: Chef_Frame_4
+      spriteId: 81d32c417729711419c8c36389a1691e
+    - name: Janitor_Frame_4
       frameIndex: 4
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: 35040973c5822e840be80f93ee3c719b
-    - name: Chef_Frame_5
+      spriteId: e018c3301e281dd4197fe32c3c38eaad
+    - name: Janitor_Frame_5
       frameIndex: 5
       cellRect:
         x: 6
         y: 4
         width: 20
         height: 23
-      spriteId: 68e2152a3b1b430488646c48909093ce
+      spriteId: 62dc579f02c1e1740aa0dedc4051ea78
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

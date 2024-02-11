@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c79fb9e69a749e94e80b8c74a38c7710
+guid: 6a6d585041a21d440b2372ca6f29cd6b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638432365687976265
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,47 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Character_Frame_0
-    originalName: 
-    pivot: {x: 0.5, y: -0.125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 20
-      height: 24
-    spriteID: 983595b6f343b4c47811936babf59985
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: Character_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: -0.13043478}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 36
-      width: 20
-      height: 23
-    spriteID: 2b14e5a30eb398249841c449e10f9a46
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 36}
-  - name: Character_Frame_2
+  - name: Stabbing Character_Frame_0
     originalName: 
     pivot: {x: 0.5, y: -0.125}
     alignment: 9
@@ -172,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 24
-    spriteID: b3d0046798680f7408f4d94ad12b4cb7
+    spriteID: af54610f2f770aa408f595938c944437
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 32, y: 4}
-  - name: Character_Frame_3
+  - name: Stabbing Character_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.13043478}
+    pivot: {x: 0.5, y: -0.11538462}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 32
-      y: 36
+      x: 4
+      y: 40
       width: 20
-      height: 23
-    spriteID: fc2c0253e889b26458d9fb916e4538de
+      height: 26
+    spriteID: 943a83d2ed1942b42b98e7439000795b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,51 +160,139 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 32, y: 36}
+    uvTransform: {x: 4, y: 40}
+  - name: Stabbing Character_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.107142866}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 20
+      height: 28
+    spriteID: d9791c17e5efe5d48916e11823b4bce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Stabbing Character_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 74
+      width: 20
+      height: 26
+    spriteID: 0a198cabd0ae268449ff93b611e3ee30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 74}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1246400679
-    name: Character
+    guid: 314871795
+    name: Stabbing Character
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Character_Frame_0
+    - name: Stabbing Character_Frame_0
       frameIndex: 0
       cellRect:
         x: 6
         y: 3
         width: 20
         height: 24
-      spriteId: 983595b6f343b4c47811936babf59985
-    - name: Character_Frame_1
+      spriteId: af54610f2f770aa408f595938c944437
+    - name: Stabbing Character_Frame_1
       frameIndex: 1
       cellRect:
         x: 6
         y: 3
         width: 20
-        height: 23
-      spriteId: 2b14e5a30eb398249841c449e10f9a46
-    - name: Character_Frame_2
+        height: 26
+      spriteId: 943a83d2ed1942b42b98e7439000795b
+    - name: Stabbing Character_Frame_2
       frameIndex: 2
       cellRect:
         x: 6
         y: 3
         width: 20
-        height: 24
-      spriteId: b3d0046798680f7408f4d94ad12b4cb7
-    - name: Character_Frame_3
+        height: 28
+      spriteId: d9791c17e5efe5d48916e11823b4bce0
+    - name: Stabbing Character_Frame_3
       frameIndex: 3
       cellRect:
         x: 6
         y: 3
         width: 20
-        height: 23
-      spriteId: fc2c0253e889b26458d9fb916e4538de
+        height: 26
+      spriteId: 0a198cabd0ae268449ff93b611e3ee30
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
