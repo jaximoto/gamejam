@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c79fb9e69a749e94e80b8c74a38c7710
+guid: 56454ad6e565abe42ac3481b79f01769
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Character_Frame_0
+  - name: Janitor_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.125}
+    pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,8 +131,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 20
-      height: 24
-    spriteID: 983595b6f343b4c47811936babf59985
+      height: 23
+    spriteID: 7a8170272603e1848952ebc9ed832345
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Character_Frame_1
+  - name: Janitor_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.13043478}
+    pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 36
+      y: 35
       width: 20
       height: 23
-    spriteID: 2b14e5a30eb398249841c449e10f9a46
+    spriteID: a7da2570e7c8d1946983488fb6211811
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,10 +160,50 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 36}
-  - name: Character_Frame_2
+    uvTransform: {x: 4, y: 35}
+  - name: Janitor_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.125}
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 66
+      width: 20
+      height: 23
+    spriteID: 67f32cd3d879b324187b73968cac260e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 66}
+  - name: Janitor_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 97
+      width: 20
+      height: 23
+    spriteID: 81d32c417729711419c8c36389a1691e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 97}
+  - name: Janitor_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -171,8 +211,8 @@ ScriptedImporter:
       x: 32
       y: 4
       width: 20
-      height: 24
-    spriteID: b3d0046798680f7408f4d94ad12b4cb7
+      height: 23
+    spriteID: e018c3301e281dd4197fe32c3c38eaad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,18 +221,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 32, y: 4}
-  - name: Character_Frame_3
+  - name: Janitor_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.13043478}
+    pivot: {x: 0.5, y: -0.17391305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 32
-      y: 36
+      y: 35
       width: 20
       height: 23
-    spriteID: fc2c0253e889b26458d9fb916e4538de
+    spriteID: 62dc579f02c1e1740aa0dedc4051ea78
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,48 +240,64 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 32, y: 36}
+    uvTransform: {x: 32, y: 35}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1246400679
-    name: Character
+    guid: -161468067
+    name: Janitor
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Character_Frame_0
+    - name: Janitor_Frame_0
       frameIndex: 0
       cellRect:
         x: 6
-        y: 3
+        y: 4
         width: 20
-        height: 24
-      spriteId: 983595b6f343b4c47811936babf59985
-    - name: Character_Frame_1
+        height: 23
+      spriteId: 7a8170272603e1848952ebc9ed832345
+    - name: Janitor_Frame_1
       frameIndex: 1
       cellRect:
         x: 6
-        y: 3
+        y: 4
         width: 20
         height: 23
-      spriteId: 2b14e5a30eb398249841c449e10f9a46
-    - name: Character_Frame_2
+      spriteId: a7da2570e7c8d1946983488fb6211811
+    - name: Janitor_Frame_2
       frameIndex: 2
       cellRect:
         x: 6
-        y: 3
+        y: 4
         width: 20
-        height: 24
-      spriteId: b3d0046798680f7408f4d94ad12b4cb7
-    - name: Character_Frame_3
+        height: 23
+      spriteId: 67f32cd3d879b324187b73968cac260e
+    - name: Janitor_Frame_3
       frameIndex: 3
       cellRect:
         x: 6
-        y: 3
+        y: 4
         width: 20
         height: 23
-      spriteId: fc2c0253e889b26458d9fb916e4538de
+      spriteId: 81d32c417729711419c8c36389a1691e
+    - name: Janitor_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 6
+        y: 4
+        width: 20
+        height: 23
+      spriteId: e018c3301e281dd4197fe32c3c38eaad
+    - name: Janitor_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 6
+        y: 4
+        width: 20
+        height: 23
+      spriteId: 62dc579f02c1e1740aa0dedc4051ea78
     linkedCells: []
     parentIndex: -1
   platformSettings: []

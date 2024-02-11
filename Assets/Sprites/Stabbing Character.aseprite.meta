@@ -128,9 +128,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 74
-      width: 22
+      x: 32
+      y: 4
+      width: 20
       height: 24
     spriteID: af54610f2f770aa408f595938c944437
     spriteBone: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 74}
+    uvTransform: {x: 32, y: 4}
   - name: Stabbing Character_Frame_1
     originalName: 
     pivot: {x: 0.5, y: -0.11538462}
@@ -150,7 +150,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 40
-      width: 22
+      width: 20
       height: 26
     spriteID: 943a83d2ed1942b42b98e7439000795b
     spriteBone: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 22
+      width: 20
       height: 28
     spriteID: d9791c17e5efe5d48916e11823b4bce0
     spriteBone: []
@@ -181,6 +181,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Stabbing Character_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 74
+      width: 20
+      height: 26
+    spriteID: 0a198cabd0ae268449ff93b611e3ee30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 74}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -193,27 +213,35 @@ ScriptedImporter:
     - name: Stabbing Character_Frame_0
       frameIndex: 0
       cellRect:
-        x: 5
+        x: 6
         y: 3
-        width: 22
+        width: 20
         height: 24
       spriteId: af54610f2f770aa408f595938c944437
     - name: Stabbing Character_Frame_1
       frameIndex: 1
       cellRect:
-        x: 5
+        x: 6
         y: 3
-        width: 22
+        width: 20
         height: 26
       spriteId: 943a83d2ed1942b42b98e7439000795b
     - name: Stabbing Character_Frame_2
       frameIndex: 2
       cellRect:
-        x: 5
+        x: 6
         y: 3
-        width: 22
+        width: 20
         height: 28
       spriteId: d9791c17e5efe5d48916e11823b4bce0
+    - name: Stabbing Character_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 6
+        y: 3
+        width: 20
+        height: 26
+      spriteId: 0a198cabd0ae268449ff93b611e3ee30
     linkedCells: []
     parentIndex: -1
   platformSettings: []
