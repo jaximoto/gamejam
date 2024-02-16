@@ -4,26 +4,65 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D body;
+    public float moveSpeed;
+    public float rotationSpeed;
 
-    float horizontal;
-    float vertical;
+    private Rigidbody2D rb;
+    private float moveY;
+    private float moveX;
+    private Vector2 moveDirection;
+    private Quaternion rotation;
 
-    public float runSpeed = 20.0f;
-
+    /************************************************
+     *-------------CORE UNITY FUNCTIONS-------------*
+     ************************************************/
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+       ProcessInputs();
     }
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        // Physics Calculations
+        Move();
+        RotateInDirectionOfInput();
+    }
+
+    /*********************************************
+     *---------Movement Helper Functions---------*
+     *********************************************/
+    void ProcessInputs()
+    {
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");
+        
+        moveDirection = new Vector2(moveX, moveY).normalized;
+
+    }
+
+    void Move()
+    {
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed,
+                                  moveDirection.y * moveSpeed);
+
+        
+    }
+
+    void RotateInDirectionOfInput()
+    {
+        if (moveDirection != Vector2.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward,
+                                                          moveDirection);
+            rotation = Quaternion.RotateTowards(transform.rotation,
+                                                           targetRotation,
+                                               rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(rotation);
+        }
     }
 }
