@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Public variables changed in editor
     public float moveSpeed;
     public float rotationSpeed;
 
+    // Component variables
+    private Animator animator;
     private Rigidbody2D rb;
+
+    // Global movement variables
     private float moveY;
     private float moveX;
     private Vector2 moveDirection;
     private Quaternion rotation;
+
+    // Animation variables
+    int isMovingHash;
 
     /************************************************
      *-------------CORE UNITY FUNCTIONS-------------*
@@ -19,6 +27,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        isMovingHash = Animator.StringToHash("isMoving");
     }
 
     void Update()
@@ -43,6 +53,14 @@ public class PlayerController : MonoBehaviour
         
         moveDirection = new Vector2(moveX, moveY).normalized;
 
+        if (moveDirection != Vector2.zero)
+        {
+            animator.SetBool(isMovingHash, true);
+        }
+        else
+        {
+            animator.SetBool(isMovingHash, false);
+        }
     }
 
     void Move()
