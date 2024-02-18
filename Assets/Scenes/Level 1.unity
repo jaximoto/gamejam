@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: c79fb9e69a749e94e80b8c74a38c7710, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 37f98625d24280b44977d06f281a1275, type: 2}
     - target: {fileID: 7878350319992209165, guid: c79fb9e69a749e94e80b8c74a38c7710, type: 3}
       propertyPath: m_RootOrder
       value: 1

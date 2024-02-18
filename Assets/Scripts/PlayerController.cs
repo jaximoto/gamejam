@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-       ProcessInputs();
+        ProcessInputs();
     }
 
     private void FixedUpdate()
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        
+
         moveDirection = new Vector2(moveX, moveY).normalized;
 
         if (moveDirection != Vector2.zero)
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed,
                                   moveDirection.y * moveSpeed);
 
-        
+
     }
 
     void RotateInDirectionOfInput()
