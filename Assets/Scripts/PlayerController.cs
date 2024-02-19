@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(isStabbingHash, true);
             // TODO add stabbing code to kill
             nextStab = Time.time + stabDelay;
-            Debug.Log(animator.GetBool(isStabbingHash));
+            //Debug.Log(animator.GetBool(isStabbingHash));
         }
         else
         {
