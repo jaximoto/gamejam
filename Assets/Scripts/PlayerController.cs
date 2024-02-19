@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Public variables changed in editor
     public float moveSpeed;
     public float rotationSpeed;
+    public float stabDelay = 0.5f;
 
     // Component variables
     private Animator animator;
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
     // Animation variables
     int isMovingHash;
     int isStabbingHash;
+
+    // Cooldown variables
+    private float nextStab = 0.15f;
 
     /************************************************
      *-------------CORE UNITY FUNCTIONS-------------*
@@ -64,10 +68,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(isMovingHash, false);
         }
 
-        if (Input.GetAxisRaw("Fire1") != 0)
+        if (Input.GetAxisRaw("Fire1") != 0 && Time.time > nextStab)
         {
             animator.SetBool(isStabbingHash, true);
-            Debug.Log("stabbed");
+            // TODO add stabbing code to kill
+            nextStab = Time.time + stabDelay;
+            Debug.Log(animator.GetBool(isStabbingHash));
         }
         else
         {
