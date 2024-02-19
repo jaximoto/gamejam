@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     // Animation variables
     int isMovingHash;
+    int isStabbingHash;
 
     /************************************************
      *-------------CORE UNITY FUNCTIONS-------------*
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isMovingHash = Animator.StringToHash("isMoving");
+        isStabbingHash = Animator.StringToHash("isStabbing");
     }
 
     void Update()
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /*********************************************
-     *---------Movement Helper Functions---------*
+     *------------Input Proccessor------------*
      *********************************************/
     void ProcessInputs()
     {
@@ -61,8 +63,21 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool(isMovingHash, false);
         }
+
+        if (Input.GetAxisRaw("Fire1") != 0)
+        {
+            animator.SetBool(isStabbingHash, true);
+            Debug.Log("stabbed");
+        }
+        else
+        {
+            animator.SetBool(isStabbingHash, false);
+        }
     }
 
+    /*********************************************
+     *---------Movement Helper Functions---------*
+     *********************************************/
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed,
