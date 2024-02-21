@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float rotationSpeed;
     public float stabDelay = 0.5f;
+    public float sneakSpeed;
+
 
     // Component variables
     private Animator animator;
     private Rigidbody2D rb;
 
     // Global movement variables
+    private float speed;
     private float moveY;
     private float moveX;
     private Vector2 moveDirection;
@@ -79,15 +82,25 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool(isStabbingHash, false);
         }
+
+        if (Input.GetButton("Fire3") == true) 
+        {
+            speed = sneakSpeed;
+        }
+        else 
+        {
+            speed = moveSpeed;
+        }
     }
 
     /*********************************************
      *---------Movement Helper Functions---------*
      *********************************************/
     void Move()
-    {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed,
-                                  moveDirection.y * moveSpeed);
+    { 
+
+        rb.velocity = new Vector2(moveDirection.x * speed,
+                                  moveDirection.y * speed);
 
 
     }
