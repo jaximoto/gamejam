@@ -4,24 +4,35 @@ using UnityEngine;
 
 public class fov : MonoBehaviour
 {
+    [SerializeField] private LayerMask layerMask;
     public float _fov = 70f;
     public float viewDistance = 5f;
+    private Mesh mesh;
+    Vector3 origin;
+    private float startingAngle;
     // Start is called before the first frame update
     void Start()
     {
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        origin = Vector3.zero;
+    }
+        
+    
 
-        Vector3 origin = Vector3.zero;
-        
+    // Update is called once per frame
+    void LateUpdate()
+    {
+
+        Debug.Log(startingAngle);
         int rayCount = 50;
-        float angle = 0f;
+        float angle = startingAngle;
         float angleIncrease = _fov / rayCount;
-        
+
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
-        int [] triangles = new int[rayCount * 3];
+        int[] triangles = new int[rayCount * 3];
 
         vertices[0] = origin;
 
@@ -30,7 +41,7 @@ public class fov : MonoBehaviour
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             if (raycastHit2D.collider == null)
             {
                 // No hit
@@ -51,7 +62,7 @@ public class fov : MonoBehaviour
                 triangleIndex += 3;
             }
             vertexIndex++;
-            
+
             angle -= angleIncrease;
         }
 
@@ -61,12 +72,6 @@ public class fov : MonoBehaviour
         mesh.triangles = triangles;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     /**************************
      *****Helper Functions*****
      *************************/
@@ -74,5 +79,26 @@ public class fov : MonoBehaviour
     {
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+    }
+
+    public static float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        Debug.Log("dir is: " + dir);
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Debug.Log("n = " + n);
+        if (n < 0) n += 360;
+
+        return n;
+    }
+
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+
+    public void SetAimDirection(Vector3 aimDirection)
+    {
+        startingAngle = GetAngleFromVectorFloat(aimDirection) - _fov / 2f;
     }
 }
