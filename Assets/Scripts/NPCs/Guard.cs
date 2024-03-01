@@ -15,7 +15,8 @@ public class Guard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _fov.SetOrigin(transform.position);
+        Vector3 spot = new Vector3(-.2f, .7f, 0) + transform.position;
+        _fov.SetOrigin(spot);
         _fov.SetAimDirection(transform.up);
     }
     

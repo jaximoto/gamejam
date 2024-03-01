@@ -99,6 +99,6 @@ public class fov : MonoBehaviour
 
     public void SetAimDirection(Vector3 aimDirection)
     {
-        startingAngle = GetAngleFromVectorFloat(aimDirection) - _fov / 2f;
+        startingAngle = GetAngleFromVectorFloat(aimDirection) + _fov / 2f;
     }
 }
