@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
-    IState currentState
+    IState currentState;
 
     // Set of possible states
     public PatrolState patrolState = new PatrolState();

@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class PatrolState : IState
 {
-    public void OnEnter()
-    {
 
+    public void OnEnter(StateController controller)
+    {
+        return;
     }
 
-    public void UpdateState()
+    public void UpdateState(StateController controller)
     {
-
+        return;
     }
 
-    public void OnHurt()
+    public void OnHurt(StateController controller)
     {
-
+        return;
     }
 
-    public void OnExit()
+    public void OnExit(StateController controller)
     {
-
+        return;
     }
 }
