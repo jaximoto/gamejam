@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamageable
 {
     // Public variables changed in editor
     public float moveSpeed;
@@ -29,6 +30,14 @@ public class PlayerController : MonoBehaviour
     // Cooldown variables
     private float nextStab = 0.15f;
 
+    // Health bar variables
+    private int health = 3;
+    
+    public Image healthBarImage;
+    public Sprite twoThirdsHealth;
+    public Sprite oneThirdsHealth;
+    public Sprite noHealth;
+    public Sprite fullHealth;
     /************************************************
      *-------------CORE UNITY FUNCTIONS-------------*
      ************************************************/
@@ -38,10 +47,15 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         isMovingHash = Animator.StringToHash("isMoving");
         isStabbingHash = Animator.StringToHash("isStabbing");
+        
+       
+        
+        
     }
 
     void Update()
     {
+        
         ProcessInputs();
     }
 
@@ -115,6 +129,31 @@ public class PlayerController : MonoBehaviour
                                                            targetRotation,
                                                rotationSpeed * Time.deltaTime);
             rb.MoveRotation(rotation);
+        }
+    }
+
+    /*********************************************
+     *------------Interface Functions------------*
+     *********************************************/
+    public void Damage()
+    {
+        Debug.Log("Took Damage");
+        health--;
+        
+        switch(health)
+        {
+            case 2:
+                healthBarImage.sprite = twoThirdsHealth;
+                break;
+            case 1:
+                healthBarImage.sprite = oneThirdsHealth;
+                break;
+            case 0:
+                healthBarImage.sprite = noHealth;
+                Debug.Log("dead");
+                // die
+                break;
+            default: break;
         }
     }
 }

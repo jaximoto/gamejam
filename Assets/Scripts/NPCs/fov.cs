@@ -24,7 +24,7 @@ public class fov : MonoBehaviour
     void LateUpdate()
     {
 
-        Debug.Log(startingAngle);
+        //Debug.Log(startingAngle);
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = _fov / rayCount;
@@ -84,9 +84,9 @@ public class fov : MonoBehaviour
     public static float GetAngleFromVectorFloat(Vector3 dir)
     {
         dir = dir.normalized;
-        Debug.Log("dir is: " + dir);
+        //Debug.Log("dir is: " + dir);
         float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        Debug.Log("n = " + n);
+        //Debug.Log("n = " + n);
         if (n < 0) n += 360;
 
         return n;
