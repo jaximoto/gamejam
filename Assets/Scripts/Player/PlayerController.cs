@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,8 +33,8 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     // Health bar variables
     private int health = 3;
-    
-    public Image healthBarImage;
+
+    private Image healthBarImage;
     public Sprite twoThirdsHealth;
     public Sprite oneThirdsHealth;
     public Sprite noHealth;
@@ -47,10 +48,12 @@ public class PlayerController : MonoBehaviour, IDamageable
         animator = GetComponent<Animator>();
         isMovingHash = Animator.StringToHash("isMoving");
         isStabbingHash = Animator.StringToHash("isStabbing");
-        
-       
-        
-        
+        GameObject healthBar = GameObject.Find("HealthBar");
+        healthBarImage = healthBar.GetComponent<Image>();
+
+
+
+
     }
 
     void Update()
