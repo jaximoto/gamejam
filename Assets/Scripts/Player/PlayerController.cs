@@ -28,8 +28,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     private Quaternion rotation;
 
     // Animation variables
-    int isMovingHash;
-    int isStabbingHash;
+    
     private string currentAnimationState;
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_STAB = "isStabbing";
@@ -38,7 +37,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     private float animDelay = 0f;
 
 
-    // Cooldown variables
+    // Stab variables
+    private bool isStabbing = false;
     private float nextStab = 0.15f;
 
     // Health bar variables
@@ -55,8 +55,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        isMovingHash = Animator.StringToHash("isMoving");
-        isStabbingHash = Animator.StringToHash("isStabbing");
         GameObject healthBar = GameObject.Find("HealthBar");
         healthBarImage = healthBar.GetComponent<Image>();
 
@@ -108,18 +106,24 @@ public class PlayerController : MonoBehaviour, IDamageable
             //Debug.Log(currentAnimationState);
             //animator.SetBool(isStabbingHash, true);
             // TODO add stabbing code to kill
+            
             nextStab = Time.time + stabDelay;
+            isStabbing = true;
             //Debug.Log(animator.GetBool(isStabbingHash));
-        }
-        
-        else if (moveDirection != Vector2.zero)
-        {
-            ChangeAnimationState(disguise, PLAYER_MOVE);
         }
         else
         {
-            ChangeAnimationState(disguise, PLAYER_IDLE);
+            if (moveDirection != Vector2.zero)
+            {
+                ChangeAnimationState(disguise, PLAYER_MOVE);
+            }
+            else
+            {
+                ChangeAnimationState(disguise, PLAYER_IDLE);
+            }
+            isStabbing = false;
         }
+        
        
 
         if (Input.GetButton("Fire3") == true) 
@@ -133,7 +137,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     }
 
     /*********************************************
-     *---------Movement Helper Functions---------*
+     *---------Physics Helper Functions----------*
      *********************************************/
     void Move()
     { 
@@ -156,6 +160,12 @@ public class PlayerController : MonoBehaviour, IDamageable
             rb.MoveRotation(rotation);
         }
     }
+
+    void Stab()
+    {
+        
+    }
+
 
     /*********************************************
      *------------Animation Functions------------*
