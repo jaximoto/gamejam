@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour, IDamageable
     private Animator animator;
     private Rigidbody2D rb;
 
+    // Disguise variable
+    private string disguise = "0";
+
     // Global movement variables
     private float speed;
     private float moveY;
@@ -27,13 +30,19 @@ public class PlayerController : MonoBehaviour, IDamageable
     // Animation variables
     int isMovingHash;
     int isStabbingHash;
+    private string currentAnimationState;
+    const string PLAYER_IDLE = "Idle";
+    const string PLAYER_STAB = "isStabbing";
+    const string PLAYER_MOVE = "isMoving";
+    private float nextAnim = 0f;
+    private float animDelay = 0f;
+
 
     // Cooldown variables
     private float nextStab = 0.15f;
 
     // Health bar variables
     private int health = 3;
-
     private Image healthBarImage;
     public Sprite twoThirdsHealth;
     public Sprite oneThirdsHealth;
@@ -60,6 +69,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         
         ProcessInputs();
+        //animator.Play("isStabbing1");
     }
 
     private void FixedUpdate()
@@ -79,26 +89,38 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
+        /*
         if (moveDirection != Vector2.zero)
         {
-            animator.SetBool(isMovingHash, true);
+            ChangeAnimationState(disguise, PLAYER_MOVE);
+            //animator.SetBool(isMovingHash, true);
         }
         else
         {
-            animator.SetBool(isMovingHash, false);
+           // ChangeAnimationState(disguise, PLAYER_IDLE);
+            //animator.SetBool(isMovingHash, false);
         }
-
+        */
         if (Input.GetAxisRaw("Fire1") != 0 && Time.time > nextStab)
         {
-            animator.SetBool(isStabbingHash, true);
+            
+            ChangeAnimationState(disguise, PLAYER_STAB, 0.5f);
+            //Debug.Log(currentAnimationState);
+            //animator.SetBool(isStabbingHash, true);
             // TODO add stabbing code to kill
             nextStab = Time.time + stabDelay;
             //Debug.Log(animator.GetBool(isStabbingHash));
         }
+        
+        else if (moveDirection != Vector2.zero)
+        {
+            ChangeAnimationState(disguise, PLAYER_MOVE);
+        }
         else
         {
-            animator.SetBool(isStabbingHash, false);
+            ChangeAnimationState(disguise, PLAYER_IDLE);
         }
+       
 
         if (Input.GetButton("Fire3") == true) 
         {
@@ -135,6 +157,30 @@ public class PlayerController : MonoBehaviour, IDamageable
         }
     }
 
+    /*********************************************
+     *------------Animation Functions------------*
+     *********************************************/
+    public void ChangeAnimationState(string disguise, string animation, float delay = 0)
+    {
+        // Set delay until next animation can play if 0 no delay for next animation
+        animDelay = delay;
+
+        // Build full animation string
+        string tmp = animation + disguise;
+
+        // Stop same animation from interrupting self
+        if (currentAnimationState == tmp)
+            return;
+
+        if (Time.time > nextAnim)
+        {
+            //Debug.Log(tmp);
+            animator.Play(tmp);
+            currentAnimationState = tmp;
+            nextAnim = Time.time + animDelay;
+        }
+        
+    }
     /*********************************************
      *------------Interface Functions------------*
      *********************************************/
